@@ -133,8 +133,6 @@ if __name__ == '__main__':
     image_color = cv2.imread("../resources/poly.jpg")
     image_gray = cv2.cvtColor(image_color, cv2.COLOR_BGR2GRAY)
 
-    center_kernel = len(kernel)//2
-
     image_filtering = image_filtering(image_gray, kernel)
     image_openCV = cv2.filter2D(src=image_gray, ddepth=-1, kernel=kernel)
 
